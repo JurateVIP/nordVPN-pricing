@@ -9,7 +9,6 @@ export const preparePageFixtures: Parameters<typeof test.extend<PreparePageFixtu
     const pricingUrl = `${baseURL}/pricing`;
     await page.goto(pricingUrl);
     await page.waitForLoadState('networkidle');
-    await page.getByTestId('consent-widget-accept-all').click();
     await use(page);
   },
 };
