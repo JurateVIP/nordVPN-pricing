@@ -8,7 +8,7 @@ export const preparePageFixtures: Parameters<typeof test.extend<PreparePageFixtu
   preparePricingPage: async ({ page, baseURL }, use) => {
     const pricingUrl = `${baseURL}/pricing`;
     await page.goto(pricingUrl);
-    await page.waitForLoadState('networkidle');
+    await page.waitForLoadState();
     await use(page);
   },
 };
